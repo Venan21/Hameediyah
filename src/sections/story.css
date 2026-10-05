@@ -1,0 +1,87 @@
+.story {
+  background: var(--white);
+}
+
+.story-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 80px);
+  align-items: center;
+}
+
+.story-row + .story-row {
+  margin-top: clamp(64px, 9vw, 112px);
+}
+
+.story-row--flip .story-figure {
+  order: 2;
+}
+
+.story-figure figcaption {
+  margin-top: 10px;
+  font-family: var(--hand);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: var(--leaf-deep);
+  text-align: center;
+}
+
+.story-art {
+  width: 100%;
+  height: auto;
+}
+
+.story-figure--portrait .story-art {
+  background: var(--wash);
+  border: 6px solid var(--white);
+  outline: 2px dashed var(--leaf);
+  outline-offset: 6px;
+  border-radius: 50% 50% 18px 18px / 36% 36% 18px 18px;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.story-text h3 {
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  color: var(--forest);
+  margin-bottom: .6em;
+}
+
+.story-text p {
+  color: var(--ink-soft);
+  max-width: 58ch;
+}
+
+.story-text p + p {
+  margin-top: 1em;
+}
+
+.story-text strong {
+  color: var(--ink);
+}
+
+.story-hand {
+  font-family: var(--hand);
+  font-weight: 700;
+  font-size: 1.45em;
+  line-height: 1;
+  color: var(--forest);
+}
+
+.story-quote {
+  margin-top: 1.6em;
+  padding: .9em 1.1em;
+  font-family: var(--slab);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  line-height: 1.3;
+  color: var(--forest);
+  background: var(--sign-soft);
+  border-left: 6px solid var(--leaf);
+  border-radius: 0 12px 12px 0;
+}
+
+@media (max-width: 860px) {
+  .story-row { grid-template-columns: 1fr; }
+  .story-row--flip .story-figure { order: 0; }
+}

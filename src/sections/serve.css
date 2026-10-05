@@ -1,0 +1,140 @@
+.serve {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: calc(var(--nav-h) + 8px) 16px 16px;
+  background:
+    radial-gradient(ellipse 60% 50% at 46% 70%, #f4f9ec 0%, transparent 70%),
+    var(--white);
+  overflow: hidden;
+}
+
+.serve-box {
+  position: relative;
+  width: min(100%, calc((100svh - var(--nav-h) - 24px) * 1.3333));
+  aspect-ratio: 1200 / 900;
+}
+
+.serve-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.serve-steam path {
+  animation: steam-rise 3.6s ease-in-out infinite;
+}
+.serve-steam path:nth-child(2) { animation-delay: 1.2s; }
+.serve-steam path:nth-child(3) { animation-delay: 2.4s; }
+
+@keyframes steam-rise {
+  0% { opacity: 0; transform: translateY(12px); }
+  40% { opacity: .75; }
+  100% { opacity: 0; transform: translateY(-34px); }
+}
+
+.serve-intro,
+.serve-outro {
+  position: absolute;
+  left: 5.8%;
+  top: 6%;
+  width: 48%;
+}
+
+.serve-intro h2 {
+  font-size: clamp(1.75rem, 3.4vw, 3rem);
+  color: var(--forest);
+}
+
+.serve-intro p {
+  margin-top: .6em;
+  color: var(--ink-soft);
+  max-width: 32ch;
+}
+
+.serve-outro {
+  left: 66%;
+  top: 30%;
+  width: 32%;
+}
+
+.serve-outro-title {
+  font-family: var(--slab);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.8vw, 2.5rem);
+  line-height: 1.12;
+  color: var(--forest);
+  margin-bottom: .8em;
+  max-width: 20ch;
+}
+
+.serve-note h3 {
+  font-family: var(--hand);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.3vw, 2.1rem);
+  line-height: 1;
+  color: var(--leaf-deep);
+}
+
+.serve-note p {
+  margin-top: .35em;
+  font-size: clamp(.82rem, 1.15vw, 1rem);
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.serve-note {
+  position: absolute;
+}
+
+@media (max-width: 760px) {
+  .serve {
+    align-content: start;
+    padding-top: calc(var(--nav-h) + 20px);
+  }
+
+  .serve-box {
+    width: 100%;
+    aspect-ratio: 910 / 610;
+    margin-top: 20svh;
+  }
+
+  .serve-notes {
+    display: none;
+  }
+
+  .serve-intro,
+  .serve-outro {
+    top: -16svh;
+    left: 0;
+    width: 100%;
+  }
+
+  .serve-note {
+    left: 0 !important;
+    top: calc(100% + 18px) !important;
+    width: 100% !important;
+    padding: 14px 16px;
+    border-left: 4px solid var(--sign);
+    background: var(--wash);
+    border-radius: 0 10px 10px 0;
+  }
+
+  .serve-note p {
+    font-size: .95rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .serve { height: auto; }
+  .serve-steam path { animation: none; opacity: .6; }
+  .serve-intro { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) and (max-width: 760px) {
+  .serve-box { margin-top: 0; aspect-ratio: auto; }
+  .serve-outro { position: static; margin-bottom: 16px; }
+  .serve-note { position: static; margin-top: 10px; }
+}
