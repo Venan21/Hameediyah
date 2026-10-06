@@ -9,13 +9,20 @@ const INDIA = [
   [126, 138], [140, 116], [150, 96],
 ]
 
-const PENINSULA = [
-  [470, 150], [486, 156], [492, 190], [496, 226], [512, 252], [530, 272], [548, 300], [566, 334], [584, 372],
-  [598, 410], [600, 440], [586, 452], [566, 444], [546, 420], [528, 392], [510, 356], [494, 320], [486, 290],
-  [482, 262], [474, 232], [466, 200], [462, 170],
+// Penang Island, traced from a reference map; George Town is the north-east tip.
+const PENANG = [
+  [432, 237], [438, 236], [444, 239], [452, 245], [460, 250], [468, 249], [477, 248], [485, 247], [492, 243],
+  [499, 237], [506, 234], [510, 235], [516, 242], [522, 247], [529, 250], [539, 252], [546, 253], [552, 257],
+  [556, 263], [562, 269], [570, 273], [579, 279], [585, 288], [581, 294], [576, 299], [571, 306], [566, 314],
+  [562, 323], [560, 334], [559, 344], [556, 355], [553, 364], [549, 376], [544, 386], [539, 397], [535, 405],
+  [532, 413], [528, 421], [524, 429], [520, 433], [516, 430], [512, 424], [508, 419], [502, 416], [494, 415],
+  [485, 415], [480, 413], [475, 417], [466, 419], [458, 419], [450, 420], [445, 423], [441, 424], [438, 421],
+  [436, 415], [436, 407], [436, 400], [438, 393], [441, 384], [444, 376], [446, 365], [448, 355], [448, 342],
+  [448, 328], [447, 313], [447, 298], [446, 288], [441, 284], [435, 282], [431, 279], [430, 271], [431, 260],
+  [431, 250], [431, 242],
 ]
 
-export const ROUTE_D = 'M200 396 C262 410 320 388 376 344 C410 316 440 288 468 270'
+export const ROUTE_D = 'M200 396 C276 412 338 350 380 290 C410 240 470 205 528 210 C560 213 576 246 580 280'
 
 const SpiceMap = forwardRef(function SpiceMap({ className }, ref) {
   const id = useSvgId('map')
@@ -68,8 +75,8 @@ const SpiceMap = forwardRef(function SpiceMap({ className }, ref) {
 
       <g filter={`url(#${id}-ink)`} fill="none" stroke="#4B2A74" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
         <path d={smoothPath(INDIA, true)} />
-        <path d={smoothPath(PENINSULA, true)} />
-        <path d="M468 268 c-6 -10 6 -18 12 -8 c4 8 -6 14 -12 8z" fill="#4B2A74" />
+        <path d={smoothPath(PENANG, true)} />
+        <circle cx="580" cy="286" r="5.5" fill="#4B2A74" />
         <path d="M404 46 L436 66 L436 126 L404 146 L372 126 L372 66Z" />
         <path d="M390 74 V118 M418 74 V118 M390 96 H418" strokeWidth="5" />
         <g strokeWidth="2.6" opacity=".7">
@@ -88,7 +95,7 @@ const SpiceMap = forwardRef(function SpiceMap({ className }, ref) {
           <path d="M-6 -12 V-26 H4 V-12" />
           <path d="M-20 -6 h4 M-10 -6 h4 M0 -6 h4" strokeWidth="2.6" />
           <path d="M-40 7 h76" strokeWidth="2" />
-          <text x="-44" y="44" stroke="none" fill="#4B2A74" fontFamily="Caveat Variable, cursive" fontWeight="600" fontSize="25">SS Rajula</text>
+          <text x="-52" y="-34" stroke="none" fill="#4B2A74" fontFamily="Caveat Variable, cursive" fontWeight="600" fontSize="25">SS Rajula</text>
         </g>
       </g>
 
@@ -97,7 +104,7 @@ const SpiceMap = forwardRef(function SpiceMap({ className }, ref) {
           <tspan x="146" y="300">Chittarkottai,</tspan>
           <tspan x="158" y="328">Tamil Nadu</tspan>
         </text>
-        <text x="470" y="136" fontSize="34" transform="rotate(-6 470 136)">Penang</text>
+        <text x="458" y="356" fontSize="30" transform="rotate(-6 458 356)">Penang</text>
       </g>
     </svg>
   )

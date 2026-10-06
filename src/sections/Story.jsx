@@ -10,6 +10,9 @@ import './story.css'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
+// The steamer stops mid-sea; the dashed route finishes drawing to George Town as it gets there.
+const SHIP_STOP = 0.4
+
 function useMapVoyage(mapRef) {
   useGSAP(
     () => {
@@ -20,13 +23,13 @@ function useMapVoyage(mapRef) {
       route.setAttribute('d', ROUTE_D)
       const len = route.getTotalLength()
       const shipRig = svgRig(ship, {})
-      const voyage = { t: 0.55 }
+      const voyage = { t: SHIP_STOP }
       const place = () => {
         const pt = route.getPointAtLength(len * voyage.t)
         shipRig.p.x = pt.x
         shipRig.p.y = pt.y - 10
         shipRig.apply()
-        reveal.style.strokeDashoffset = 1 - Math.min(1, voyage.t + 0.02)
+        reveal.style.strokeDashoffset = 1 - Math.min(1, voyage.t / SHIP_STOP)
       }
 
       const mm = gsap.matchMedia()
@@ -34,14 +37,14 @@ function useMapVoyage(mapRef) {
         voyage.t = 0
         place()
         gsap.to(voyage, {
-          t: 0.55,
+          t: SHIP_STOP,
           ease: 'none',
           onUpdate: place,
           scrollTrigger: { trigger: svg, start: 'top 80%', end: 'center 45%', scrub: 0.6 },
         })
       })
       mm.add('(prefers-reduced-motion: reduce)', () => {
-        voyage.t = 0.55
+        voyage.t = SHIP_STOP
         place()
         reveal.style.strokeDashoffset = 0
       })
