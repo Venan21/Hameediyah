@@ -140,11 +140,11 @@ export function Visit() {
     <section className="visit" id="visit">
       <div className="visit-photo">
         <img
-          src={PHOTO.street}
-          width="1600"
-          height="1200"
+          src={PHOTO.visit}
+          width="1920"
+          height="1157"
           loading="lazy"
-          alt="Lebuh Campbell in George Town, with diners queueing outside Hameediyah"
+          alt="Left, a table of Hameediyah dishes: nasi kandar, fried chicken, murtabak, roti and tandoori. Right, a Hameediyah branch with its yellow signboard and terrace seating."
         />
       </div>
       <div className="wrap visit-inner">

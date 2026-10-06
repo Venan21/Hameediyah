@@ -299,9 +299,11 @@
 .visit-photo img {
   display: block;
   width: 100%;
-  height: clamp(220px, 34vw, 460px);
+  height: auto;
+  aspect-ratio: 1920 / 1157;
+  max-height: 72svh;
   object-fit: cover;
-  object-position: 50% 62%;
+  object-position: 50% 40%;
 }
 
 .visit-photo::after {

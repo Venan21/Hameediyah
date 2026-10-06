@@ -23,7 +23,7 @@ import muralHero from '../assets/photos/mural-hero.webp'
 import muralPortrait from '../assets/photos/mural-portrait.webp'
 import hawkers from '../assets/photos/photo-hawkers-1928.webp'
 import storefront from '../assets/photos/photo-storefront.webp'
-import street from '../assets/photos/photo-street.webp'
+import visit from '../assets/photos/photo-visit.webp'
 import queue from '../assets/photos/photo-queue.webp'
 import dishKandar from '../assets/photos/dish-nasi-kandar.webp'
 import dishBiryani from '../assets/photos/dish-nasi-biryani.webp'
@@ -70,7 +70,7 @@ export const PHOTO = {
   muralPortrait,
   hawkers,
   storefront,
-  street,
+  visit,
   queue,
   dishes: {
     kandar: dishKandar,
