@@ -165,19 +165,7 @@ p {
   font-weight: 700;
 }
 
-.steam path {
-  animation: steam-rise-sm 4s ease-in-out infinite;
-}
-.steam path:nth-child(2) { animation-delay: 1.4s; }
-
-@keyframes steam-rise-sm {
-  0% { opacity: 0; transform: translateY(8px); }
-  40% { opacity: .8; }
-  100% { opacity: 0; transform: translateY(-24px); }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .steam path { animation: none; opacity: .5; }
   .btn:hover { transform: none; }
 }

@@ -2,8 +2,7 @@ import { useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import KandarSketch from '../art/KandarSketch'
-import OldManMural from '../art/OldManMural'
+import { PHOTO } from '../art/photos'
 import SpiceMap, { ROUTE_D } from '../art/SpiceMap'
 import { svgRig } from '../lib/svg'
 import './story.css'
@@ -63,9 +62,16 @@ export default function Story() {
         </div>
 
         <div className="story-row">
-          <figure className="story-figure">
-            <KandarSketch className="story-art" />
-            <figcaption>The kandar: rice on one side, curries on the other.</figcaption>
+          <figure className="story-figure story-figure--archive">
+            <img
+              className="story-photo"
+              src={PHOTO.hawkers}
+              width="1600"
+              height="1016"
+              loading="lazy"
+              alt="Two street vendors in Penang in 1928, seated beside baskets and pots hung from carrying poles"
+            />
+            <figcaption>Street vendors with shoulder-pole baskets, Penang, 1928.</figcaption>
           </figure>
           <div className="story-text">
             <h3>The kandar</h3>
@@ -85,11 +91,13 @@ export default function Story() {
 
         <div className="story-row story-row--flip">
           <figure className="story-figure story-figure--portrait">
-            <OldManMural
-              withScript={false}
-              viewBox="170 92 300 330"
-              className="story-art"
-              title="Close-up of the mural: a smiling seller with a white beard, songkok and towel over his shoulders, giving a thumbs up"
+            <img
+              className="story-photo"
+              src={PHOTO.muralPortrait}
+              width="947"
+              height="1100"
+              loading="lazy"
+              alt="Close-up of the mural: a smiling seller with a white beard, songkok and towel over his shoulders, giving a thumbs up beside a tiffin carrier"
             />
             <figcaption>The man on our wall, painted at Hameediyah.</figcaption>
           </figure>
