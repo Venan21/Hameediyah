@@ -7,6 +7,11 @@ export const NAV = [
   { href: '#visit', label: 'Visit' },
 ]
 
+export const MURAL_LINE = {
+  ms: 'Pi mai, pi mai, Hameediyah jugak',
+  en: "No matter where you go or what you do, you'll always end up back at Hameediyah",
+}
+
 export const FACTS = [
   { big: '1907', small: 'Serving George Town for over a century' },
   { big: 'Malaysia Book of Records', small: "Officially the country's oldest nasi kandar restaurant" },

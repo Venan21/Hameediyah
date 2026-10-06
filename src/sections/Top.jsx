@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Signboard from '../art/Signboard'
 import { PHOTO } from '../art/photos'
-import { FACTS, NAV } from '../content'
+import { FACTS, MURAL_LINE, NAV } from '../content'
 import './top.css'
 
 export function Nav() {
@@ -58,14 +58,25 @@ export function Hero() {
               fetchPriority="high"
               alt="The Hameediyah wall mural: a white-bearded nasi kandar seller in a yellow shirt and songkok gives a thumbs up behind a real black bicycle, its rack carrying a rattan basket, a tiffin carrier and clay pots"
             />
-            <svg className="hero-script" viewBox="0 0 1500 1130" aria-hidden="true">
-              <path id="hero-script-path" d="M30 700 C110 470 330 250 690 130" fill="none" />
-              <text className="mural-script" fontSize="70" fill="#1B2A1E">
-                <textPath href="#hero-script-path">Pi mai, pi mai, Hameediyah jugak</textPath>
-              </text>
+            <svg className="hero-script" viewBox="0 0 1500 1130" role="img" aria-label={`${MURAL_LINE.ms}: ${MURAL_LINE.en}`}>
+              <path id="hero-script-ms" d="M30 700 C110 470 330 250 690 130" fill="none" />
+              <path id="hero-script-en-1" d="M0 610 C80 380 292 160 700 40" fill="none" />
+              <path id="hero-script-en-2" d="M30 690 C112 460 326 240 712 116" fill="none" />
+              <path id="hero-script-en-3" d="M70 772 C154 542 366 322 724 202" fill="none" />
+              <g className="mural-script" fill="#1B2A1E">
+                <text className="hero-script-ms" fontSize="70">
+                  <textPath href="#hero-script-ms">{MURAL_LINE.ms}</textPath>
+                </text>
+                <g className="hero-script-en" fontSize="54">
+                  {['No matter where you go', "or what you do, you'll always", 'end up back at Hameediyah.'].map((line, i) => (
+                    <text key={line}>
+                      <textPath href={`#hero-script-en-${i + 1}`}>{line}</textPath>
+                    </text>
+                  ))}
+                </g>
+              </g>
             </svg>
           </div>
-          <figcaption>Go here, go there, it's still Hameediyah.</figcaption>
         </figure>
       </div>
       <p className="hero-scroll" aria-hidden="true">Scroll to serve a plate</p>

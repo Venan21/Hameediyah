@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react'
 import { PHOTO } from '../art/photos'
 import SpiceMap, { ROUTE_D } from '../art/SpiceMap'
 import { svgRig } from '../lib/svg'
+import { MURAL_LINE } from '../content'
 import './story.css'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
@@ -109,8 +110,8 @@ export default function Story() {
               carrier and clay pots, the way nasi kandar travelled before it had a counter.
             </p>
             <p>
-              Above him, in Penang Malay: <span className="story-hand">Pi mai, pi mai, Hameediyah jugak.</span> Go here,
-              go there, it's still Hameediyah.
+              Above him, in Penang Malay: <span className="story-hand">{MURAL_LINE.ms}.</span> No matter
+              where you go or what you do, you'll always end up back at Hameediyah.
             </p>
           </div>
         </div>
