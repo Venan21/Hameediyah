@@ -20,7 +20,7 @@ export const ROUTE_D = 'M200 396 C262 410 320 388 376 344 C410 316 440 288 468 2
 const SpiceMap = forwardRef(function SpiceMap({ className }, ref) {
   const id = useSvgId('map')
   return (
-    <svg ref={ref} className={className} viewBox="0 0 640 560" role="img" aria-label="Hand-drawn map on a flatbread tracing a route from Chittarkottai in India, past the steamer SS Rajula, to Penang">
+    <svg ref={ref} className={className} viewBox="0 0 640 560" role="img" aria-label="Hand-drawn map on a flatbread tracing a route from Chittarkottai, Tamil Nadu, in India, past the steamer SS Rajula, to Penang">
       <defs>
         <linearGradient id={`${id}-bread`} x1="0" y1="0" x2="1" y2="1">
           <stop offset="0" stopColor="#F1D394" />
@@ -93,7 +93,10 @@ const SpiceMap = forwardRef(function SpiceMap({ className }, ref) {
       </g>
 
       <g className="map-label" fontFamily="Caveat Variable, cursive" fontWeight="600" fill="#4B2A74">
-        <text x="128" y="292" fontSize="27" transform="rotate(-8 128 292)">Chittarkottai</text>
+        <text fontSize="27" transform="rotate(-8 148 300)">
+          <tspan x="146" y="300">Chittarkottai,</tspan>
+          <tspan x="158" y="328">Tamil Nadu</tspan>
+        </text>
         <text x="470" y="136" fontSize="34" transform="rotate(-6 470 136)">Penang</text>
       </g>
     </svg>

@@ -27,18 +27,18 @@ const NARROW_QUERY = '(max-width: 760px)'
 const NARROW_VIEW = '220 190 910 610'
 const STREAM_D = 'M540 404 C536 440 548 470 546 508'
 
-const TIFFIN_W = 130
-const POT_W = 112
+const TIFFIN_W = 116
+const POT_W = 100
 const BASKET_W = 250
 // Resting spots in basket-local space (origin = centre of the basket rim); tier 0 is the bottom one.
 const STACK = {
   tiers: [
-    { x: -117, y: -17.5 },
-    { x: -117, y: -45.8 },
-    { x: -117, y: -76.6 },
+    { x: -110, y: 4.6 },
+    { x: -110, y: -20.6 },
+    { x: -110, y: -48 },
   ],
-  lid: { x: -117, y: -130.6 },
-  pot: { x: 8, y: -107 },
+  lid: { x: -110, y: -96.2 },
+  pot: { x: 6, y: -72.3 },
 }
 
 const toBasket = ({ x, y, r }) => ({ x: x - BASKET.x, y: y - BASKET.y, r })
@@ -338,6 +338,7 @@ export default function ServeScene() {
           <g data-rig="basket">
             <g transform={`translate(${BASKET.x} ${BASKET.y})`}>
               <ellipse cx="0" cy="150" rx="125" ry="14" fill="#2c3a1e" opacity=".25" filter="url(#serve-soft)" />
+              <image {...fitCut(CUT.basketBack, BASKET_W, { anchor: 'top' })} x={-BASKET_W / 2} y={-20} />
               {STACK.tiers.map((t, i) => (
                 <g key={i} data-tier={i} transform={`translate(${t.x} ${t.y})`}>
                   <image {...fitCut(CUT.tiers[i], TIFFIN_W, { anchor: 'top' })} />
@@ -349,7 +350,7 @@ export default function ServeScene() {
               <g data-rig="pot" transform={`translate(${STACK.pot.x} ${STACK.pot.y})`}>
                 <image {...fitCut(CUT.claypot, POT_W, { anchor: 'top' })} />
               </g>
-              <image {...fitCut(CUT.basket, BASKET_W, { anchor: 'top' })} x={-BASKET_W / 2} y={-20} />
+              <image {...fitCut(CUT.basketFront, BASKET_W, { anchor: 'top' })} x={-BASKET_W / 2} y={-20} />
             </g>
           </g>
         </svg>

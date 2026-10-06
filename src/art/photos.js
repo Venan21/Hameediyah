@@ -1,4 +1,5 @@
-import basket from '../assets/photos/cut-basket.webp'
+import basketBack from '../assets/photos/cut-basket-back.webp'
+import basketFront from '../assets/photos/cut-basket-front.webp'
 import claypot from '../assets/photos/cut-claypot.webp'
 import lamb from '../assets/photos/cut-lamb.webp'
 import plate from '../assets/photos/cut-plate.webp'
@@ -33,7 +34,8 @@ import dishKurma from '../assets/photos/dish-mutton-kurma.webp'
 
 // Pixel sizes of the cutouts, so SVG <image> boxes keep each photo's aspect ratio.
 export const CUT = {
-  basket: { src: basket, w: 640, h: 426 },
+  basketBack: { src: basketBack, w: 640, h: 426 },
+  basketFront: { src: basketFront, w: 640, h: 426 },
   claypot: { src: claypot, w: 260, h: 318 },
   lamb: { src: lamb, w: 480, h: 312 },
   plate: { src: plate, w: 1320, h: 518 },

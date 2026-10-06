@@ -97,26 +97,3 @@ export const CONTACT = {
   maps: 'https://www.google.com/maps/search/?api=1&query=Hameediyah+Restaurant+Lebuh+Campbell+George+Town+Penang',
   facebook: 'https://www.facebook.com/HAMEEDIYAHRESTAURANTSDNBHD1025046U',
 }
-
-const commons = (file) => `https://commons.wikimedia.org/wiki/File:${file}`
-
-// VERIFY: the hero/portrait mural photos and the nasi kandar and biryani plate photos came from the client's
-// reference folder (one is a frame from a third-party YouTube review); confirm rights or replace before launch.
-export const CREDITS = [
-  { what: 'Rattan basket', title: 'Rattan baskets DSC00588', author: 'ROCKY', licence: 'CC BY-SA 4.0', url: commons('Rattan_baskets_-_বেতের_ঝুড়ি_-_DSC00588.jpg') },
-  { what: 'Tiffin carrier', title: 'Old silver camping pot', author: 'dof pinhole', licence: 'Pexels License', url: 'https://www.pexels.com/photo/old-silver-camping-bot-16052430/' },
-  { what: 'Clay pot', title: 'A depiction of mud pot with lid', author: 'Thamizhpparithi Maari', licence: 'CC BY-SA 3.0', url: commons('A_depiction_of_mud_pot_with_lid.JPG') },
-  { what: 'Plate', title: 'A yellow plate sitting on top of a white table', author: 'servet photograph', licence: 'Unsplash License', url: 'https://unsplash.com/photos/sBTWWive5ZI' },
-  { what: 'Rice', title: 'White rice at a restaurant', author: 'Calgary Reviews', licence: 'CC BY 2.0', url: commons('White_rice_at_a_restaurant.jpg') },
-  { what: 'Lamb shank', title: "Brasserie Chanteclair (Lyon) - souris d'agneau", author: 'Benoît Prieur', licence: 'CC0', url: commons("Brasserie_Chanteclair_(Lyon)_-_souris_d'agneau_(avril_2022).jpg") },
-  { what: 'Okra', title: 'Abelmoschus esculentus-3-yercaud-salem-India', author: 'Yercaud-elango', licence: 'CC BY-SA 4.0', url: commons('Abelmoschus_esculentus-3-yercaud-salem-India.JPG') },
-  { what: 'Curry gravy', title: 'Chicken curry Trivandrum', author: 'Abhilashsnair', licence: 'CC0', url: commons('Chicken_curry_Trivandrum.jpg') },
-  { what: 'Curry leaves', title: 'Curry patta', author: 'Miansari66', licence: 'Public domain', url: commons('Curry_patta.JPG') },
-  { what: 'Dried chillies', title: 'Byadgi Chilli', author: 'Rajaramraok', licence: 'CC BY-SA 4.0', url: commons('Byadgi_Chilli.jpg') },
-  { what: 'Penang street vendors, 1928', title: 'Straatverkopers in Penang, KITLV 1403994', author: 'The Federal Rubber Stamp Co. / KITLV, Leiden University Libraries', licence: 'CC BY 4.0', url: commons('Straatverkopers_in_Penang,_KITLV_1403994.tiff') },
-  { what: 'Hameediyah shopfront and street', title: 'Hameediyah 1, 2 and 3', author: 'Slleong', licence: 'CC0', url: 'https://commons.wikimedia.org/wiki/Category:Hameediyah_Restaurant,_Penang' },
-  { what: 'Murtabak', title: 'Murtabak at Makan2 Perth', author: 'Orderinchaos', licence: 'CC BY-SA 4.0', url: commons('Murtabak_at_Makan2_Perth.jpg') },
-  { what: 'Beef rendang', title: 'Beef Rendang', author: 'Miansari66', licence: 'CC0', url: commons('Beef_Rendang..JPG') },
-  { what: 'Mutton kurma', title: 'Mutton Khorma, Hyderabad India', author: 'Abhinaba Basu', licence: 'CC BY 2.0', url: commons('Mutton_Khorma,_Hyderabad_India.jpg') },
-  { what: 'Chicken curry', title: 'Chicken curry 2', author: 'ProjectManhattan', licence: 'CC BY-SA 3.0', url: commons('Chicken_curry_2.jpg') },
-]

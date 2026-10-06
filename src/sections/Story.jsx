@@ -119,13 +119,13 @@ export default function Story() {
         <div className="story-row">
           <figure className="story-figure story-figure--map">
             <SpiceMap ref={mapRef} className="story-art" />
-            <figcaption>Drawn by hand at our table: Chittarkottai, the SS Rajula, Penang.</figcaption>
+            <figcaption>Drawn by hand at our table: Chittarkottai, Tamil Nadu, the SS Rajula, Penang.</figcaption>
           </figure>
           <div className="story-text">
             <h3>The family</h3>
             {/* VERIFY: confirm the map's Chittarkottai connection with the family before launch. */}
             <p>
-              The map at our table traces a route from Chittarkottai, on India's southeast coast, across the Bay of
+              The map at our table traces a route from Chittarkottai, Tamil Nadu, on India's southeast coast, across the Bay of
               Bengal to Penang.
             </p>
             <p>

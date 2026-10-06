@@ -291,13 +291,25 @@
 }
 
 .visit-photo {
+  position: relative;
+  border-bottom: 6px solid var(--leaf);
+  margin-bottom: clamp(48px, 7vw, 88px);
+}
+
+.visit-photo img {
   display: block;
   width: 100%;
   height: clamp(220px, 34vw, 460px);
   object-fit: cover;
   object-position: 50% 62%;
-  border-bottom: 6px solid var(--leaf);
-  margin-bottom: clamp(48px, 7vw, 88px);
+}
+
+.visit-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 75% 85% at 50% 50%, transparent 55%, rgba(12, 30, 16, .34) 100%);
+  pointer-events: none;
 }
 
 .visit .kicker {
@@ -370,29 +382,3 @@
   height: auto;
 }
 
-.credits {
-  margin-top: 24px;
-  font-size: .82rem;
-  color: #a9c3a0;
-}
-
-.credits summary {
-  cursor: pointer;
-  font-weight: 600;
-  color: #c8dcc0;
-}
-
-.credits p {
-  margin-top: 10px;
-}
-
-.credits ul {
-  margin-top: 8px;
-  padding-left: 1.1em;
-  columns: 2 22rem;
-  column-gap: 32px;
-}
-
-.credits a {
-  color: #e3eedd;
-}

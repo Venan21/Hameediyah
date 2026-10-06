@@ -1,6 +1,6 @@
 import Signboard from '../art/Signboard'
 import { PHOTO } from '../art/photos'
-import { CONTACT, CREDITS, DISHES, FEATURES, LOCATIONS, TIMELINE } from '../content'
+import { CONTACT, DISHES, FEATURES, LOCATIONS, TIMELINE } from '../content'
 import './rest.css'
 
 export function Heritage() {
@@ -138,14 +138,15 @@ export function Locations() {
 export function Visit() {
   return (
     <section className="visit" id="visit">
-      <img
-        className="visit-photo"
-        src={PHOTO.street}
-        width="1600"
-        height="1200"
-        loading="lazy"
-        alt="Lebuh Campbell in George Town, with diners queueing outside Hameediyah"
-      />
+      <div className="visit-photo">
+        <img
+          src={PHOTO.street}
+          width="1600"
+          height="1200"
+          loading="lazy"
+          alt="Lebuh Campbell in George Town, with diners queueing outside Hameediyah"
+        />
+      </div>
       <div className="wrap visit-inner">
         <p className="kicker">Come hungry</p>
         <h2>The pots are on.</h2>
@@ -185,20 +186,6 @@ export function Footer() {
           <p>164A Lebuh Campbell, George Town, Penang. {CONTACT.phone}</p>
         </div>
       </div>
-      <details className="wrap credits">
-        <summary>Photo credits</summary>
-        <p>
-          Photos were cut out, upscaled or colour-corrected for this site. Adaptations of CC BY-SA photos are shared
-          under the same licence.
-        </p>
-        <ul>
-          {CREDITS.map((c) => (
-            <li key={c.what}>
-              {c.what}: <a href={c.url} target="_blank" rel="noopener noreferrer">{c.title}</a> by {c.author}, {c.licence}
-            </li>
-          ))}
-        </ul>
-      </details>
     </footer>
   )
 }
