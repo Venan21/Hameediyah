@@ -60,17 +60,17 @@ export function Hero() {
             />
             <svg className="hero-script" viewBox="0 0 1500 1130" role="img" aria-label={`${MURAL_LINE.ms}: ${MURAL_LINE.en}`}>
               <path id="hero-script-ms" d="M30 700 C110 470 330 250 690 130" fill="none" />
-              <path id="hero-script-en-1" d="M0 610 C80 380 292 160 700 40" fill="none" />
-              <path id="hero-script-en-2" d="M30 690 C112 460 326 240 712 116" fill="none" />
-              <path id="hero-script-en-3" d="M70 772 C154 542 366 322 724 202" fill="none" />
+              <path id="hero-script-en-1" d="M0 470 C150 300 400 120 700 30" fill="none" />
+              <path id="hero-script-en-2" d="M0 590 C170 410 430 230 690 150" fill="none" />
+              <path id="hero-script-en-3" d="M30 700 C200 540 420 380 640 290" fill="none" />
               <g className="mural-script" fill="#1B2A1E">
                 <text className="hero-script-ms" fontSize="70">
                   <textPath href="#hero-script-ms">{MURAL_LINE.ms}</textPath>
                 </text>
-                <g className="hero-script-en" fontSize="54">
+                <g className="hero-script-en" fontSize="60" letterSpacing="1.5">
                   {['No matter where you go', "or what you do, you'll always", 'end up back at Hameediyah.'].map((line, i) => (
-                    <text key={line}>
-                      <textPath href={`#hero-script-en-${i + 1}`}>{line}</textPath>
+                    <text key={line} textAnchor="middle">
+                      <textPath href={`#hero-script-en-${i + 1}`} startOffset="50%">{line}</textPath>
                     </text>
                   ))}
                 </g>
